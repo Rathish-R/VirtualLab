@@ -1,0 +1,26 @@
+<div class="Mass-Transfer-page">
+    <div class="row">
+        <div class="col-2">
+            <div class="heading">Equipments</div>
+            <ul class="labs">
+                <li>
+                    <a><button class="btn btn-equip" (click)="isRotaryOn=true">Rotary Dryer</button></a>
+                </li>
+                <li>
+                    <a><button class="btn btn-equip">sfdsfsdf</button></a>
+                </li>
+                <li>
+                    <a><button class="btn btn-equip">sxdsfsdf</button></a>
+                </li>
+            </ul>
+        </div>
+        <div class="col-10">
+            <div *ngIf="isRotaryOn">
+                <div class="Rotary">
+                    <app-rotary-dryer></app-rotary-dryer>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
