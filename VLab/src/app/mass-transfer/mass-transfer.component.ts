@@ -6,8 +6,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./mass-transfer.component.css']
 })
 export class MassTransferComponent {
-isRotaryOn:boolean=false;
-isSfOn:boolean=false;
-isSxOn:boolean=false;
+selected!:string;
+isClickLabOn:boolean=true;
+equipments:string[]=[
+  "Rotary Dryer","Tray Dryer","Li-Li Extraction"
+]
+onClickLabs(isLab : boolean){
+return (isLab)? false:true;
+}
 
 }

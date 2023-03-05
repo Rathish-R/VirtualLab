@@ -12,10 +12,24 @@ ht:string[]=["lab-1","lab-2","lab-3"];
 mt:string[]=["lab-1","lab-2","lab-3"];
 mo:string[]=["lab-1","lab-2","lab-3"];
 cre:string[]=["lab-1","lab-2","lab-3"];
-isFmOn :boolean=false;
-isHtOn:boolean=false;
-isMtOn:boolean=false;
-isMoOn:boolean=false;
-isCREOn:boolean=false;
+isFmOn !:boolean;
+  isHtOn!:boolean;
+  isMtOn!:boolean;
+  isMoOn!:boolean;
+  isCREOn!:boolean;
+  constructor(){
+    this.initialize();
+  }
+  initialize(){
+    this.isFmOn=false;
+    this.isHtOn=false;
+    this.isMtOn=false;
+    this.isMoOn=false;
+    this.isCREOn=false;
+  
+  }
+  OnClickHome(){
+this.initialize();
+  }
 
 }

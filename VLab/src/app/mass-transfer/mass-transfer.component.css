@@ -18,3 +18,12 @@ li{
 col{
     border:1px
 }
+.btn-lab{
+    max-width: 100px;
+    margin: 7px 0;
+}
+.selected{
+    color: rgba(255, 255, 255, 0.65);
+    background-color: black;
+    transform: scale(1.1,1.1);
+}
