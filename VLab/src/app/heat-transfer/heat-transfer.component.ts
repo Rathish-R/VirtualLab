@@ -1,18 +1,18 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-chemical-rection-engineering',
-  templateUrl: './chemical-rection-engineering.component.html',
-  styleUrls: ['./chemical-rection-engineering.component.css']
+  selector: 'app-heat-transfer',
+  templateUrl: './heat-transfer.component.html',
+  styleUrls: ['./heat-transfer.component.css']
 })
-export class ChemicalRectionEngineeringComponent {
-  selected:string="Semi Batch Reactor";
+export class HeatTransferComponent {
+  selected:string="Shell and Tube Heat Exchanger";
   isClickLabOn:boolean=true;
   equipments:string[]=[
-    "Semi Batch Reactor","CSTR-Kinetics","CSTR-in series"
+    "Shell and Tube Heat Exchanger","Double Pipe Heat Exchanger","Jacketed Vessel"
   ];
   selectedOperation :string="Theory";
-
+ResultObt:boolean=false;
   isTheoryOn: boolean = false;
   isFormulaOn: boolean = false;
   isSimulationOn: boolean = false;
@@ -35,3 +35,4 @@ export class ChemicalRectionEngineeringComponent {
     this.isSimulationOn = true;
   }
 }
+

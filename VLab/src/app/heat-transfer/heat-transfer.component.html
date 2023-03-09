@@ -1,0 +1,199 @@
+<div class="MT-page" style="height: 100%;">
+    <div class="row" style="min-height: 100%;">
+        <div class="col-2">
+            <div class="sidebar overflow-auto"
+                style="min-width: 10%;max-width: 768px; height: 100%;z-index:1;background-color: rgb(237, 237, 237);">
+
+                <button class="btn btn-toggle" type="button" data-bs-toggle="collapse" data-bs-target="#Labs"
+                    aria-expanded="false" (click)="this.isClickLabOn=onClickLabs(isClickLabOn)"
+                    [class.selected]="isClickLabOn">
+                    <h5><span *ngIf="!isClickLabOn"> {{selected}} <i class="bi bi-chevron-down"></i></span>
+                        <span *ngIf="isClickLabOn">Hide Equipments <i class="bi bi-chevron-up"></i></span>
+                    </h5>
+                </button>
+                <div *ngIf="isClickLabOn " id="navbarNavDropdown">
+
+                    <div class="heading">Equipments</div>
+                    <ul class="labs">
+                        <li *ngFor="let eq of equipments"><a><button class="btn btn-lab" (click)="this.selected=eq"
+                                    [class.selected]="eq==this.selected">{{eq}}</button></a></li>
+                    </ul>
+                </div>
+
+
+            </div>
+        </div>
+        <div class="col-8 overflow-auto" style=" background-color: rgb(255, 255, 255);;">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-light ">
+                <ul class="Topics">
+                    <li class="topic-button">
+                        <a href="#Theory">
+                            <button class="part" [class.selected]="selectedOperation=='theory'"
+                                (click)="this.selectedOperation='theory'">Theory</button></a>
+
+                    </li>
+                    <li class="topic-button">
+                        <a href="#Formulae">
+                            <button class="part" (click)="this.selectedOperation='formulae'"
+                                [class.selected]="selectedOperation=='formulae'">Formulae </button> </a>
+                    </li>
+                    <li class="topic-button">
+                        <a href="#Simulation">
+                            <button class="part" (click)="this.selectedOperation='simulation'"
+                                [class.selected]="selectedOperation=='simulation'"> Simulation </button></a>
+                    </li>
+                    <li>
+                        <a href="#Result">
+                            <button class="part" (click)="this.selectedOperation='Result'"
+                                [class.selected]="selectedOperation=='Result'">Result </button> </a>
+                    </li>
+                </ul>
+                </nav>
+            <div *ngIf="selected=='Shell and Tube Heat Exchanger'">
+                <div id="Shell-Tube-HEx" style="margin: 30px;">
+
+                    <h1 style="font-weight:600" id="Theory">Theory</h1>
+                    <div>
+                        <br>
+                        <h4>Objectives</h4>
+                        <p> To determine the overall Heat transfer coefficient of the given Shell and tube Heat
+                            Exchanger </p><br>
+                        <p class="Theory">
+
+                            A shell and tube heat exchanger is a type of heat exchanging device constructed using a
+                            large cylindrical enclosure, or shell,
+                            that has bundles of perfectly spaced tubing compacted in its interior.
+                            Heat exchanging is the transfer of heat from one substance or medium to a similar substance
+                            or medium. Shell and tube heat exchangers
+                            are the most common form of heat exchanger design.
+                            It is used in desulphurisation process in petroleum industry
+                            <br>
+                            <br>
+                            <br>
+
+                        </p>
+                    </div>
+                    <h1 id="Formulae">Formulae </h1>
+                    <div class="Formulae">
+                        <p>Energy Balance<br>
+
+                            Q = m<sub>h</sub> Cp<sub>h</sub>(T<sub>hin</sub> - T<sub>hout</sub>) =
+                            m<sub>c</sub> Cp<sub>c</sub>(T<sub>Cout</sub> - T<sub>Cin</sub>)
+                            Q = UA ΔT<sub>LMTD</sub>
+                            <br><br>
+                            ΔT<sub>LMTD</sub> = (T<sub>Hout</sub>-T<sub>Cin</sub>) -
+                            (T<sub>hin</sub>-T<sub>Cout</sub>)/(Ln(T<sub>Hout</sub>-T<sub>Cin</sub>/T<sub>hin</sub>-T<sub>Cout</sub>))
+
+
+                        </p>
+                    </div>
+                    <h1 id="Simulation"> Simulation</h1>
+                    <div class="Simulation">
+
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpf-rqWbehHCIoePhk004OFnhrVBJGXHekAa5NwlGVDA&usqp=CAU&ec=48600113"
+                            class="rounded mx-auto d-block" alt="Shell And Tube "
+                            style="height :max-content;width:70%;">
+
+                        <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#input">Enter
+                            Specification</button>
+                    </div>
+
+                </div>
+            </div>
+            <div></div>
+            <div *ngIf="selected=='Double Pipe Heat Exchanger'">
+                <div id="Double-Pipe-HEx" style="margin: 30px;">
+
+                    <h1 style="font-weight:600" id="Theory">Theory</h1>
+                    <div>
+                        <h4>Objectives</h4>
+                        <p> To determine the coefficient of Friction factor over range of reynolds Number</p><br>
+                        <br>
+                        <p class="Theory">
+                            Double pipe heat exchangers is a type of heat exchanger in which the transfer of heat is
+                            obtained
+                            the passing the liquids adjacent to each other (Transfer type heat exchanger) ,
+                            <br>
+                            A transfer type of heat exchanger is the one in which both fluids pass simultaneously
+                            through the device and heat is transferred through separating walls
+                            In practice most of the heat exchangers are transfer type only The transfer type exchangers
+                            are further classified according to flow arrangements as
+                            <br><br>
+                            Parallel flow in which fluid flow is in the same direction
+                            <br><br>
+                            Counter flow in which fluid flow is in the opposite directions
+                            <br><br>
+                            Cross flow in which fluid flow is at right angles to each other
+                            <br>
+                            <br>
+
+                        </p>
+                    </div>
+                    <h1 id="Formulae">Formulae </h1>
+                    <div class="Formulae">
+                        .<br>
+                        .<br>
+                        .<br>
+                        .<br>
+                        .<br>
+                        .<br>
+                        .<br>
+                        .<br>
+                    </div>
+                    <h1 id="Simulation"> Simulation</h1>
+                    <div class="Simulation">
+
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpf-rqWbehHCIoePhk004OFnhrVBJGXHekAa5NwlGVDA&usqp=CAU&ec=48600113"
+                            class="rounded mx-auto d-block" alt="Shell And Tube "
+                            style="height :max-content;width:70%;">
+
+                        <button class="btn btn-success">Enter Specification</button>
+                    </div>
+
+                </div>
+            </div>
+            <h1>Result </h1>
+            <div class="Result" style="margin: 5%;">
+                <div *ngIf="!ResultObt">
+                    <div class="alert alert-warning">
+                       <h3> Currently  Result cannot be published</h3>
+
+                        </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="col-2">
+            <div class="parts" style="padding:5% 0; background-color: rgb(237, 237, 237);height:100%;">
+
+
+                
+                <div class="position-fixed bottom-0 end-0">
+
+                    <a id="GoTO" href="#Theory"><button class="btn btn-goto" style="border-radius:100%;"><i
+                                class="bi bi-chevron-up"
+                                style="color: rgba(233, 233, 233, 0.875);font-size: 20px;"></i></button></a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+<div class="modal" tabindex="-1" id="input">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Modal title</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p>User Input </p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-warning" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-success">Submit</button>
+        </div>
+      </div>
+    </div>
+  </div>

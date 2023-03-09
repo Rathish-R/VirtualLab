@@ -9,6 +9,8 @@ import { FluidMechanicsComponent } from './fluid-mechanics/fluid-mechanics.compo
 import { MassTransferComponent } from './mass-transfer/mass-transfer.component';
 import { ChemicalRectionEngineeringComponent } from './chemical-rection-engineering/chemical-rection-engineering.component';
 import { SemiBatchComponent } from './semi-batch/semi-batch.component';
+import { MechanicalOperationsComponent } from './mechanical-operations/mechanical-operations.component';
+import { HeatTransferComponent } from './heat-transfer/heat-transfer.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { SemiBatchComponent } from './semi-batch/semi-batch.component';
     FluidMechanicsComponent,
     MassTransferComponent,
     ChemicalRectionEngineeringComponent,
-    SemiBatchComponent
+    SemiBatchComponent,
+    MechanicalOperationsComponent,
+    HeatTransferComponent
   ],
   imports: [
     BrowserModule,

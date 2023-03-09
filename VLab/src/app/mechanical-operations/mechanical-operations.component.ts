@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-chemical-rection-engineering',
-  templateUrl: './chemical-rection-engineering.component.html',
-  styleUrls: ['./chemical-rection-engineering.component.css']
+  selector: 'app-mechanical-operations',
+  templateUrl: './mechanical-operations.component.html',
+  styleUrls: ['./mechanical-operations.component.css']
 })
-export class ChemicalRectionEngineeringComponent {
+export class MechanicalOperationsComponent {
   selected:string="Semi Batch Reactor";
   isClickLabOn:boolean=true;
   equipments:string[]=[
@@ -35,3 +35,4 @@ export class ChemicalRectionEngineeringComponent {
     this.isSimulationOn = true;
   }
 }
+

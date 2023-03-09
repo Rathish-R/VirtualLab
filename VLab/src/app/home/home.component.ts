@@ -17,6 +17,8 @@ isFmOn !:boolean;
   isMtOn!:boolean;
   isMoOn!:boolean;
   isCREOn!:boolean;
+  isHomeOn:boolean=true;
+  isAboutOn : boolean=false
   constructor(){
     this.initialize();
   }
@@ -26,10 +28,48 @@ isFmOn !:boolean;
     this.isMtOn=false;
     this.isMoOn=false;
     this.isCREOn=false;
-  
+   
+  this.isAboutOn=false
   }
+
   OnClickHome(){
 this.initialize();
+
+this.isHomeOn=true;
+  }
+  onClickAbout(){
+    this.isHomeOn=false;
+    this.isAboutOn=true;
+  }
+  onClickFm(){
+    this.isHomeOn=false;
+    this.initialize();
+   
+    this.isFmOn=true;
+  }
+  onClickHt(){
+    this.isHomeOn=false;
+    this.initialize();
+    this.isHomeOn=false;
+    this.isHtOn=true;
+  }
+  onClickMt(){
+    this.isHomeOn=false;
+    this.initialize();
+    this.isHomeOn=false;
+    this.isMtOn=true;
+  }
+  onClickCre(){
+    this.isHomeOn=false;
+    this.initialize();
+    this.isHomeOn=false;
+    this.isCREOn=true;
+  }
+  onClickMo(){
+    this.isHomeOn=false;
+    this.initialize();
+    
+    this.isMoOn=true;
   }
 
 }
