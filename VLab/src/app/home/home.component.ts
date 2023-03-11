@@ -6,70 +6,66 @@ import { Labs } from '../Labs';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent {
-labs :string[]=Labs;
-fm:string[]=["lab-1","lab-2","lab-3"];
-ht:string[]=["lab-1","lab-2","lab-3"];
-mt:string[]=["lab-1","lab-2","lab-3"];
-mo:string[]=["lab-1","lab-2","lab-3"];
-cre:string[]=["lab-1","lab-2","lab-3"];
-isFmOn !:boolean;
-  isHtOn!:boolean;
-  isMtOn!:boolean;
-  isMoOn!:boolean;
-  isCREOn!:boolean;
-  isHomeOn:boolean=true;
-  isAboutOn : boolean=false
-  constructor(){
+  labs: string[] = Labs;
+
+  isFmOn !: boolean;
+  isHtOn!: boolean;
+  isMtOn!: boolean;
+  isMoOn!: boolean;
+  isCREOn!: boolean;
+  isHomeOn: boolean = true;
+  isAboutOn: boolean = false
+  constructor() {
     this.initialize();
   }
-  initialize(){
-    this.isFmOn=false;
-    this.isHtOn=false;
-    this.isMtOn=false;
-    this.isMoOn=false;
-    this.isCREOn=false;
-   
-  this.isAboutOn=false
+  initialize() {
+    this.isFmOn = false;
+    this.isHtOn = false;
+    this.isMtOn = false;
+    this.isMoOn = false;
+    this.isCREOn = false;
+
+    this.isAboutOn = false
   }
 
-  OnClickHome(){
-this.initialize();
+  OnClickHome() {
+    this.initialize();
 
-this.isHomeOn=true;
+    this.isHomeOn = true;
   }
-  onClickAbout(){
-    this.isHomeOn=false;
-    this.isAboutOn=true;
+  onClickAbout() {
+    this.isHomeOn = false;
+    this.isAboutOn = true;
   }
-  onClickFm(){
-    this.isHomeOn=false;
+  onClickFm() {
+    this.isHomeOn = false;
     this.initialize();
-   
-    this.isFmOn=true;
+
+    this.isFmOn = true;
   }
-  onClickHt(){
-    this.isHomeOn=false;
+  onClickHt() {
+    this.isHomeOn = false;
     this.initialize();
-    this.isHomeOn=false;
-    this.isHtOn=true;
+    this.isHomeOn = false;
+    this.isHtOn = true;
   }
-  onClickMt(){
-    this.isHomeOn=false;
+  onClickMt() {
+    this.isHomeOn = false;
     this.initialize();
-    this.isHomeOn=false;
-    this.isMtOn=true;
+    this.isHomeOn = false;
+    this.isMtOn = true;
   }
-  onClickCre(){
-    this.isHomeOn=false;
+  onClickCre() {
+    this.isHomeOn = false;
     this.initialize();
-    this.isHomeOn=false;
-    this.isCREOn=true;
+    this.isHomeOn = false;
+    this.isCREOn = true;
   }
-  onClickMo(){
-    this.isHomeOn=false;
+  onClickMo() {
+    this.isHomeOn = false;
     this.initialize();
-    
-    this.isMoOn=true;
+
+    this.isMoOn = true;
   }
 
 }
